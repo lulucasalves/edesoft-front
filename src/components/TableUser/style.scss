@@ -25,10 +25,15 @@
       text-align: center;
 
       div {
-        svg:last-child {
-          margin-left: 20px;
-          fill: var(--primary);
+        svg {
+          cursor: pointer;
+
+          &:last-child {
+            margin-left: 20px;
+            fill: var(--primary);
+          }
         }
+
       }
     }
 
