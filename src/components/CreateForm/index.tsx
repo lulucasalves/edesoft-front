@@ -29,13 +29,7 @@ export function CreateForm() {
   });
 
   async function onSubmit({ lastName, firstName, email }: ICreateForm) {
-    await postUser({
-      email: email,
-      name: {
-        firstname: firstName,
-        lastname: lastName,
-      },
-    })
+    await postUser()
       .then(() =>
         dispatch(
           createUser({

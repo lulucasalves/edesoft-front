@@ -1,15 +1,12 @@
 import { AxiosError, AxiosResponse } from "axios";
 
-import { IUserCreate } from "types";
-
 import { api } from "../api";
 
-export function postUser({ lastName, firstName, email }: IUserCreate) {
+export function postUser() {
   return new Promise((resolve, reject) => {
-    const userObject = { lastName, firstName, email };
     (async () => {
       await api
-        .post(`users`, userObject)
+        .post(`users`, {})
         .then((res: AxiosResponse) => {
           const data = res.data;
           if (res.status === 200 || res.status === 201) {
