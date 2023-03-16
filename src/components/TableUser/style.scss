@@ -1,0 +1,43 @@
+.tableUser {
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+
+  thead {
+    th {
+      height: 50px;
+      width: 150px;
+      text-align: center;
+    }
+  }
+
+  tbody {
+
+    tr {
+      &:nth-child(2n+1) {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    td {
+      height: 50px;
+      width: 150px;
+      text-align: center;
+
+      div {
+        svg:last-child {
+          margin-left: 20px;
+          fill: var(--primary);
+        }
+      }
+    }
+
+
+  }
+
+
+
+
+
+
+}
