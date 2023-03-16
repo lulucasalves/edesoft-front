@@ -4,7 +4,7 @@ import { IUserCreate } from "types";
 
 import { api } from "../api";
 
-export function postUser({ lastName, firstName, email }: any) {
+export function postUser({ lastName, firstName, email }: IUserCreate) {
   return new Promise((resolve, reject) => {
     const userObject = { lastName, firstName, email };
     (async () => {

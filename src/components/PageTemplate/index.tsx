@@ -1,7 +1,13 @@
 import { BiPlus, BiUser } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
-export function PageTemplate({ children }: { children: JSX.Element }) {
+export function PageTemplate({
+  children,
+  scrollWidth = false,
+}: {
+  children: JSX.Element;
+  scrollWidth?: boolean;
+}) {
   const navigate = useNavigate();
 
   return (
@@ -23,7 +29,12 @@ export function PageTemplate({ children }: { children: JSX.Element }) {
           </li>
         </ul>
       </div>
-      <div className="content">{children}</div>
+      <div
+        className="content"
+        style={scrollWidth ? { minWidth: "1000px" } : {}}
+      >
+        {children}
+      </div>
     </section>
   );
 }

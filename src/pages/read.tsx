@@ -35,7 +35,7 @@ export function Read() {
   }, []);
 
   return (
-    <PageTemplate>
+    <PageTemplate scrollWidth>
       <TableUser users={users} />
     </PageTemplate>
   );
